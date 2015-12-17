@@ -21,7 +21,6 @@ public class Hangman extends ConsoleProgram {
 
     public void run() {
         setUp();
-        println(word);
         playGame();
         endGame();
 	}
