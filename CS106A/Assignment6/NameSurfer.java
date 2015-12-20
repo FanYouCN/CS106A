@@ -18,6 +18,18 @@ public class NameSurfer extends Program implements NameSurferConstants {
  */
 	public void init() {
 	    // You fill this in, along with any helper methods //
+        label = new JLabel("Name");
+        tf = new JTextField("",20);
+        jbGraph = new JButton("Graph");
+        jbClear = new JButton("Clear");
+        graph = new NameSurferGraph();
+        dataBase = new NameSurferDataBase(NAMES_DATA_FILE);
+        add(label,SOUTH);
+        add(tf,SOUTH);
+        add(jbGraph,SOUTH);
+        add(jbClear,SOUTH);
+        add(graph);
+        addActionListeners();
 	}
 
 /* Method: actionPerformed(e) */
@@ -27,6 +39,22 @@ public class NameSurfer extends Program implements NameSurferConstants {
  * button actions.
  */
 	public void actionPerformed(ActionEvent e) {
-		// You fill this in //
+        if (e.getSource() == jbGraph){
+            NameSurferEntry entry = dataBase.findEntry(tf.getText());
+            graph.addEntry(entry);
+            graph.update();
+        }
+        if (e.getSource() == jbClear){
+            graph.clear();
+            graph.update();
+        }
 	}
+
+/* ivar */
+	private JLabel label;
+	private JTextField tf;
+	private JButton jbGraph;
+	private JButton jbClear;
+    private NameSurferGraph graph;
+    private NameSurferDataBase dataBase;
 }

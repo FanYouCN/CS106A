@@ -28,8 +28,6 @@ public class HangmanLexicon {
             }
         } catch (IOException ex) {
             System.err.println("Error reading file");
-        } catch (NullPointerException ex){
-            System.err.println("I don't know what this is.");
         }
 
     }
