@@ -10,6 +10,10 @@ import acm.util.*;
 
 public class Hangman extends ConsoleProgram {
 
+    public static void main(String[] args) {
+        new Hangman().start(args);
+    }
+
     /*Constant*/
     private static final int NUMBER_OF_GUESSES = 8;
 

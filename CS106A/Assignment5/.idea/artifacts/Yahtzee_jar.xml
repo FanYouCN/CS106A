@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Yahtzee:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Yahtzee_jar</output-path>
+    <root id="archive" name="Yahtzee.jar">
+      <element id="module-output" name="Yahtzee" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/yahtzeelib.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/acm.jar" path-in-jar="/" />
+      <element id="library" level="project" name="Assignment5" />
+    </root>
+  </artifact>
+</component>

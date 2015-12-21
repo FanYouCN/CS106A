@@ -16,6 +16,10 @@ import java.awt.event.*;
 
 public class Breakout extends GraphicsProgram {
 
+    public static void main(String[] args) {
+        new Breakout().start(args);
+    }
+
 /** Width and height of application window in pixels */
 	public static final int APPLICATION_WIDTH = 400;
 	public static final int APPLICATION_HEIGHT = 600;
@@ -70,7 +74,6 @@ public class Breakout extends GraphicsProgram {
 	}
 
     private void setUp(){
-        setSize(WIDTH,HEIGHT);
         setUpBricks();
         setUpPaddle();
         addBall();

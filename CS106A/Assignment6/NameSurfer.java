@@ -11,6 +11,10 @@ import javax.swing.*;
 
 public class NameSurfer extends Program implements NameSurferConstants {
 
+    public static void main(String[] args) {
+        new NameSurfer().start(args);
+    }
+
 /* Method: init() */
 /**
  * This method has the responsibility for reading in the data base

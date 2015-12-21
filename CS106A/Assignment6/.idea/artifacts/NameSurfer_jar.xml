@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="NameSurfer:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/NameSurfer_jar</output-path>
+    <root id="archive" name="NameSurfer.jar">
+      <element id="module-output" name="NameSurfer" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/acm.jar" path-in-jar="/" />
+      <element id="library" level="project" name="acm" />
+    </root>
+  </artifact>
+</component>
