@@ -22,11 +22,13 @@ public class NameSurfer extends Program implements NameSurferConstants {
  */
 	public void init() {
 	    // You fill this in, along with any helper methods //
-        label = new JLabel("Name");
+        JLabel label = new JLabel("Name");
         tf = new JTextField("",20);
+        tf.addActionListener(this);
         jbGraph = new JButton("Graph");
         jbClear = new JButton("Clear");
         graph = new NameSurferGraph();
+        graph.setSize(APPLICATION_WIDTH, APPLICATION_HEIGHT);
         dataBase = new NameSurferDataBase(NAMES_DATA_FILE);
         add(label,SOUTH);
         add(tf,SOUTH);
@@ -43,7 +45,7 @@ public class NameSurfer extends Program implements NameSurferConstants {
  * button actions.
  */
 	public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == jbGraph){
+        if (e.getSource() == jbGraph || e.getSource() == tf){
             NameSurferEntry entry = dataBase.findEntry(tf.getText());
             graph.addEntry(entry);
             graph.update();
@@ -51,11 +53,11 @@ public class NameSurfer extends Program implements NameSurferConstants {
         if (e.getSource() == jbClear){
             graph.clear();
             graph.update();
+
         }
 	}
 
 /* ivar */
-	private JLabel label;
 	private JTextField tf;
 	private JButton jbGraph;
 	private JButton jbClear;
